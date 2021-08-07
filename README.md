@@ -10,7 +10,7 @@ El proyecto se encuentra hosteado en **Netlify**
 
 ### More about this week's project 🤓
 
-<img src="https://github.com/judithmg/nuwe-map/blob/main/public/images/map.png?raw=true"/>
+<img src="https://github.com/judithmg/nuwe-map/blob/main/public/map.png?raw=true"/>
 
 La aplicación se divide en una barra lateral izquierda en la que se encuentra un `input` que el usuario puede rellenar para hace una búsqueda. Esta búsqueda tomará como base el punto en el que se encuentre actualmente el usuario, por lo que es necesario activar la geolocalización para poder utilizar la aplicación.
 
@@ -22,11 +22,11 @@ Con el slider, se puede seleccionar el rango de km a los que se hará la búsque
 
 La app también es mobile responsive.
 
-<img src="https://github.com/judithmg/nuwe-map/blob/main/public/images/mobile.png?raw=true"/>
+<img src="https://github.com/judithmg/nuwe-map/blob/main/public/mobile.png?raw=true"/>
 
 En caso de no encontrarse resultados, se muestra una ventana avisando al usuario.
 
-<img src="https://github.com/judithmg/nuwe-map/blob/main/public/images/notf.png?raw=true"/>
+<img src="https://github.com/judithmg/nuwe-map/blob/main/public/notf.png?raw=true"/>
 
 ### API used 📚
 
@@ -58,7 +58,7 @@ src/
 
 ## Sonar report ☀
 
-<img src="https://github.com/judithmg/nuwe-map/blob/main/public/images/sonar.png?raw=true"/>
+<img src="https://github.com/judithmg/nuwe-map/blob/main/public/sonar.png?raw=true"/>
 
 En caso de querer generar un reporte con sonar-scanner, crea un archivo `sonar-project.properties` con el siguiente código:
 

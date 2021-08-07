@@ -1,0 +1,33 @@
+@import "src/styles/index";
+
+.not-found__ {
+    &container {
+        width: 400px;
+        padding: 10px;
+        button {
+            align-self: flex-end;
+            border: none;
+            background-color: transparent;
+            color: $primary;
+            font-size: 20px;
+            transition: ease-in 0.1s;
+            &:hover {
+                color: $primary-light;
+            }
+        }
+        @include flex(column, center, center);
+        position: absolute;
+        background-color: $background-dark;
+        border-radius: 10px;
+        border: 1px solid $primary-dark;
+        z-index: 2;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    &body {
+        text-align: center;
+        h3 {
+            margin: 3px;
+        }
+    }
+}

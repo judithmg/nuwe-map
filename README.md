@@ -1,5 +1,3 @@
-<img src="https://nuwe.io/_next/image?url=%2Flogo_color.png&w=64&q=75"/>
-
 # Nuwe Summer League 💻
 
 El repositorio contiene el proyecto para la Summer League de Nuwe. Está hecho en **React** con **JavaScript**, creado con `create-react-app`. Para estilos se uso `Sass`. Este tercer reto pide crear una aplicación en la que los usuarios podrán ver un mapa, en el que podrán hacer búsquedas y crear la ruta para poder llegar al punto de interés.

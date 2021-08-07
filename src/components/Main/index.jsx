@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils } from '@fortawesome/free-solid-svg-icons/faUtensils';
 import { faTree } from '@fortawesome/free-solid-svg-icons/faTree';
 import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons/faShoppingBasket';
-import { map } from '../../constants';
+import { map as mapText } from '../../constants';
 import Tomtom from '../Map';
 import getNearbyPlaces, { getNearbyButtons } from '../../utils/getNearbyPlaces';
 
@@ -81,13 +81,13 @@ const Map = () => {
   return (
     <main className="nuwemap__container">
       <div className="nuwemap__aside">
-        <h3>{map.maps.title.toUpperCase()}</h3>
-        <p>{map.maps.content}</p>
-        <p>{map.maps.ruta}</p>
+        <h3>{mapText.maps.title.toUpperCase()}</h3>
+        <p>{mapText.maps.content}</p>
+        <p>{mapText.maps.ruta}</p>
 
         <ReactSearchBox
           className="react-search-box"
-          placeholder={map.maps.placeholder}
+          placeholder={mapText.maps.placeholder}
           matchedRecords={
             searchResults.length
             && searchResults
@@ -123,8 +123,8 @@ const Map = () => {
         />
 
         <div className="divider" />
-        <h3>{map.maps.destacados.title}</h3>
-        <p>{map.maps.destacados.content}</p>
+        <h3>{mapText.maps.destacados.title}</h3>
+        <p>{mapText.maps.destacados.content}</p>
         <div className="aside__buttons">
           <button
             type="button"
@@ -135,7 +135,7 @@ const Map = () => {
             className={`nuwemap__aside-btn ${firstButton ? 'active-btn' : null}`}
           >
             <FontAwesomeIcon icon={faUtensils} className="icon" />
-            {map.maps.destacados.restaurantes}
+            {mapText.maps.destacados.restaurantes}
           </button>
 
           <button
@@ -147,7 +147,7 @@ const Map = () => {
             className={`nuwemap__aside-btn ${secondButton ? 'active-btn' : null}`}
           >
             <FontAwesomeIcon icon={faTree} className="icon" />
-            {map.maps.destacados.parques}
+            {mapText.maps.destacados.parques}
           </button>
 
           <button
@@ -159,11 +159,11 @@ const Map = () => {
             className={`nuwemap__aside-btn ${thirdButton ? 'active-btn' : null}`}
           >
             <FontAwesomeIcon icon={faShoppingBasket} className="icon" />
-            {map.maps.destacados.tiendas}
+            {mapText.maps.destacados.tiendas}
           </button>
         </div>
         <p>
-          {map.maps.destacados.distancia}
+          {mapText.maps.destacados.distancia}
           :
           {' '}
           <strong>

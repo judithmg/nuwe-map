@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+<img src="https://nuwe.io/_next/image?url=%2Flogo_color.png&w=64&q=75"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Nuwe Summer League 💻
 
-## Available Scripts
+El repositorio contiene el proyecto para la Summer League de Nuwe. Está hecho en **React** con **JavaScript**, creado con `create-react-app`. Para estilos se uso `Sass`. Este tercer reto pide crear una aplicación en la que los usuarios podrán ver un mapa, en el que podrán hacer búsquedas y crear la ruta para poder llegar al punto de interés.
 
-In the project directory, you can run:
+El proyecto se encuentra hosteado en **Netlify**
 
-### `yarn start`
+## Week #3 ⛱
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### More about this week's project 🤓
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img src="https://github.com/judithmg/nuwe-summer-1/blob/main/public/images/map.png?raw=true"/>
 
-### `yarn test`
+La aplicación se divide en una barra lateral izquierda en la que se encuentra un `input` que el usuario puede rellenar para hace una búsqueda. Esta búsqueda tomará como base el punto en el que se encuentre actualmente el usuario, por lo que es necesario activar la geolocalización para poder utilizar la aplicación.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En caso de quererlo, se pueden seleccionar diferentes filtros, haciendo clic a los botones.
 
-### `yarn build`
+En el reto de la semana se pedía que se aplicasen otros filtros pero se decidieron cambiar a `Restaurantes, Entretenimiento y Tiendas` debido a que no se encontraban suficientes resultados de la otra manera. Aún así, no se encuentran muchos resultados aplicando estos filtros; debería invertirse más tiempo en comprobar si es que los lugares listados en la API no están bien categorizados, o si es mejor usar otras categorías.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Con el slider, se puede seleccionar el rango de km a los que se hará la búsqueda por filtros.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La app también es mobile responsive.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img src="https://github.com/judithmg/nuwe-summer-1/blob/main/public/images/mobile.png?raw=true"/>
 
-### `yarn eject`
+En caso de no encontrarse resultados, se muestra una ventana avisando al usuario.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img src="https://github.com/judithmg/nuwe-summer-1/blob/main/public/images/mobile.png?raw=true"/>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### API used 📚
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+La API utilizada es la de [TomTom](https://developer.tomtom.com/). Es necesario tener una cuenta y obtener una api key para poder correr la aplicación en local.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Libraries used 📚
 
-## Learn More
+- **@fortawesome** para introducir iconos
+- **@material-ui** para el slider
+- **tomtom-international** para la creación del mapa. Provee una extensa api con diferentes utilidades para mapas, tracking, direcciones...
+- **axios** para hacer las búsquedas por filtros
+- **`eslint`** como linter, para analizar el código y solucionar problemas
+- **react-search-box** para la búsqueda por autocompletado
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Folder structure 📁
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+public/
+src/
+├───components
+├───constants
+├───styles
+└───utils
+```
 
-### Code Splitting
+## Live preview 📳
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[Click here to go to the deployed site](https://nuwe-map.netlify.app)
 
-### Analyzing the Bundle Size
+## Sonar report ☀
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img src="https://github.com/judithmg/nuwe-summer-1/blob/main/public/images/sonar.png?raw=true"/>
 
-### Making a Progressive Web App
+En caso de querer generar un reporte con sonar-scanner, crea un archivo `sonar-project.properties` con el siguiente código:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```
+# must be unique in a given SonarQube instance
+sonar.projectKey=my:project
 
-### Advanced Configuration
+# --- optional properties ---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# defaults to project key
+#sonar.projectName=My project
+# defaults to 'not provided'
+#sonar.projectVersion=1.0
 
-### Deployment
+# Encoding of the source code. Default is default system encoding
+#sonar.sourceEncoding=UTF-8
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## More about this project 🤓
 
-### `yarn build` fails to minify
+Recuerda introducir tu api key siguiendo el ejemplo en `env.example`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+REACT_APP_TOMTOM=YOUR_API_KEY
+```
+
+## Run this project 🏃‍♀️
+
+```
+git clone https://github.com/judithmg/nuwe-map
+cd nuwe-map
+npm install
+```
+
+To run the project, use
+
+```
+npm start
+```
+
+Project will run in http://localhost:3000 if available, otherwise check your terminal.
+
+## Author 👩‍💻
+
+- Judith Martínez (judithmg)

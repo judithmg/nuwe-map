@@ -1,4 +1,4 @@
-import texts from './texts';
+import map from './map';
 import urls from './urls';
 
-export { texts, urls };
+export { map, urls };
